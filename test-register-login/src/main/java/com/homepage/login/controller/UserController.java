@@ -27,7 +27,7 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping(value = "accounts/register",method={RequestMethod.POST,RequestMethod.GET})
-	public String accountRegister(TUser account,Model modelMap) {
+	public String accountRegister(TUser account) {
 		//如果用户是空则让用户去注册
 		if(account ==null || account.getUsername() ==null) {
 			return "/user/accounts/register";
